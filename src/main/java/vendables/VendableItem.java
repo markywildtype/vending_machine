@@ -1,11 +1,11 @@
 package vendables;
 
-public abstract class Vendable {
+public abstract class VendableItem {
 
     private String name;
     private double price;
 
-    public Vendable(String name, double price){
+    public VendableItem(String name, double price){
         this.name = name;
         this.price = price;
     }
