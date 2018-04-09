@@ -41,7 +41,11 @@ public class Rack {
         return dispensedItem;
     }
 
-    public RackIdentifier getIdentifier() {
+    public RackIdentifier getIdentifier(){
         return this.rackIdentifier;
+    }
+
+    public void addMultiple(ArrayList<IVend> itemArray){
+        this.rackContents.addAll(itemArray);
     }
 }

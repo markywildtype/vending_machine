@@ -3,7 +3,10 @@ import org.junit.Test;
 import racks.Rack;
 import racks.RackIdentifier;
 import vendables.Crisps;
+import vendables.IVend;
 import vendables.Sweet;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -73,6 +76,16 @@ public class RackTest {
         rack1.addItem(sweet);
         rack1.addItem(sweet);
         assertEquals(crisps, rack1.dispenseItem());
+    }
+
+    @Test
+    public void canAddMultipleItemsSimultaneously(){
+        ArrayList<IVend> itemArray = new ArrayList<>();
+        itemArray.add(crisps);
+        itemArray.add(crisps);
+        itemArray.add(crisps);
+        rack1.addMultiple(itemArray);
+        assertEquals(3, rack1.getRackContents().size());
     }
 
 }
