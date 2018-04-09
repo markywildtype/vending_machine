@@ -9,10 +9,12 @@ public class Rack {
 
     private ArrayList<IVend> rackContents;
     private boolean selectedStatus;
+    private RackIdentifier rackIdentifier;
 
-    public Rack(){
+    public Rack(RackIdentifier rackIdentifier){
         this.rackContents = new ArrayList<>(5);
         this.selectedStatus = false;
+        this.rackIdentifier = rackIdentifier;
 
     }
 
@@ -38,5 +40,9 @@ public class Rack {
     public IVend dispenseItem(){
         IVend dispensedItem = this.rackContents.remove(0);
         return dispensedItem;
+    }
+
+    public RackIdentifier getIdentifier() {
+        return this.rackIdentifier;
     }
 }

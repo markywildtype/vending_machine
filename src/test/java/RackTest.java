@@ -13,9 +13,14 @@ public class RackTest {
 
     @Before
     public void before(){
-        rack1 = new Rack();
+        rack1 = new Rack(RackIdentifier.A);
         crisps = new Crisps("Monster Munch", 0.65);
         sweet = new Sweet("Skittles", 0.80);
+    }
+
+    @Test
+    public void rackHasIdentifier(){
+        assertEquals(RackIdentifier.A , rack1.getIdentifier());
     }
 
     @Test
