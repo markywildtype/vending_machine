@@ -74,30 +74,63 @@ public class VendingMachine {
         if(this.getCoinsPendingValue() == item.getPrice()){
             return retainCoinsDispenseItem(rack);
         } else if(this.getCoinsPendingValue() > item.getPrice()){
-            int difference = this.getCoinsPendingValue() - item.getPrice();
-            switch(difference){
-                case 5:
-                    changeSlot.add(new Coin(CoinValue.NICKEL));
-                    break;
-                case 10:
-                    changeSlot.add(new Coin(CoinValue.DIME));
-                    break;
-                case 25:
-                    changeSlot.add(new Coin(CoinValue.QUARTER));
-                    break;
-                case 100:
-                    changeSlot.add(new Coin(CoinValue.DOLLAR));
-                    break;
+            makeChange(item);
             }
             return retainCoinsDispenseItem(rack);
-        }
-        return null;
     }
 
     public VendableItem retainCoinsDispenseItem(Rack rack){
         this.coinsRetained.addAll(this.coinsPending);
         this.coinsPending.clear();
         return (VendableItem) rack.dispenseItem();
+    }
+
+    public void makeChange(VendableItem item){
+        int difference = this.getCoinsPendingValue() - item.getPrice();
+
+        switch(difference % 25){
+            case 0:
+                int iterations = difference / 25;
+                while(iterations > 0) {
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    iterations--;
+                }
+                break;
+            case 5:
+                int iterations2 = difference / 25;
+                while(iterations2 > 0){
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    iterations2--;
+                }
+                changeSlot.add(new Coin(CoinValue.NICKEL));
+                break;
+            case 10:
+                int iterations3 = difference / 25;
+                while(iterations3 > 0){
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    iterations3--;
+                }
+                changeSlot.add(new Coin(CoinValue.DIME));
+                break;
+            case 15:
+                int iterations4 = difference / 25;
+                while(iterations4 > 0){
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    iterations4--;
+                }
+                changeSlot.add(new Coin(CoinValue.DIME));
+                changeSlot.add(new Coin(CoinValue.NICKEL));
+                break;
+            case 20:
+                int iterations5 = difference / 25;
+                while(iterations5 > 0){
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    iterations5--;
+                }
+                changeSlot.add(new Coin(CoinValue.DIME));
+                changeSlot.add(new Coin(CoinValue.DIME));
+                break;
+        }
     }
 
     public ArrayList<Coin> getChangeSlot(){

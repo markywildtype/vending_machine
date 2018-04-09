@@ -206,4 +206,17 @@ public class VendingMachineTest {
         assertEquals(25, vendingMachine.getChangeSlotValue());
     }
 
+    @Test
+    public void changeAddedToChangeSlotIfGreaterOverpaid(){
+        vendingMachine.insertCoin(dollar);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(dime);
+//        vendingMachine.insertCoin(nickel);
+        vendingMachine.selectRack(rack1);
+        assertEquals(2, vendingMachine.getChangeSlot().size());
+    }
+
 }
