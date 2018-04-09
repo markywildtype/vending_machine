@@ -1,5 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
+import racks.Rack;
+import racks.RackIdentifier;
 import vendables.Crisps;
 import vendables.Sweet;
 

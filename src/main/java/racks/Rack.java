@@ -1,9 +1,8 @@
-import vendables.Crisps;
+package racks;
+
 import vendables.IVend;
-import vendables.Sweet;
 
 import java.util.ArrayList;
-import java.util.BitSet;
 
 public class Rack {
 

@@ -1,3 +1,5 @@
+package racks;
+
 public enum RackIdentifier {
 
     A,
