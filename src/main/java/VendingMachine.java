@@ -1,4 +1,5 @@
 import coins.Coin;
+import coins.CoinValue;
 import racks.Rack;
 import vendables.Crisps;
 import vendables.IVend;
@@ -72,6 +73,23 @@ public class VendingMachine {
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
         if(this.getCoinsPendingValue() == item.getPrice()){
             return retainCoinsDispenseItem(rack);
+        } else if(this.getCoinsPendingValue() > item.getPrice()){
+            int difference = this.getCoinsPendingValue() - item.getPrice();
+            switch(difference){
+                case 5:
+                    changeSlot.add(new Coin(CoinValue.NICKEL));
+                    break;
+                case 10:
+                    changeSlot.add(new Coin(CoinValue.DIME));
+                    break;
+                case 25:
+                    changeSlot.add(new Coin(CoinValue.QUARTER));
+                    break;
+                case 100:
+                    changeSlot.add(new Coin(CoinValue.DOLLAR));
+                    break;
+            }
+            return retainCoinsDispenseItem(rack);
         }
         return null;
     }
@@ -117,7 +135,7 @@ public class VendingMachine {
         }
     }
 
-//Overloaded method to add multiple coins at the same time:
+//Overloaded method to add multiple coins:
 
     public void addToCoinsRetained(ArrayList<Coin> coinArrayList){
         if(this.serviceMode == true){
@@ -134,7 +152,7 @@ public class VendingMachine {
 //Overloaded method to add multiple items to a rack:
 
     public void addToRack(Rack rack, ArrayList<IVend> itemArrayList){
-        if(serviceMode == true) {
+        if(serviceMode == true){
             rack.addMultiple(itemArrayList);
         }
     }
