@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59eb59b6-b0f6-4c82-9ff7-24aec728a9fe" name="Default" comment="Crisps class created and initial tests created">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/VendingMachine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vendables/Sweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vendables/Sweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vendables/VendableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vendables/VendableItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrispsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrispsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DrinkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DrinkTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SweetsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SweetsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -46,8 +38,8 @@
       <file leaf-file-name="RackTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/RackTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+            <state relative-caret-position="330">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
@@ -83,29 +75,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+            <state relative-caret-position="356">
+              <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
                 <element signature="e#654#655#0" expanded="true" />
                 <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#1135#1136#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="433">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1115#1116#0" expanded="true" />
                 <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#2328#2329#0" expanded="true" />
+                <element signature="e#2394#2395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drink.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Drink.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Crisps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#125#126#0" expanded="true" />
+                <element signature="e#159#160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -568,23 +588,23 @@
         <option value="$PROJECT_DIR$/src/main/java/vendables/Vendable.java" />
         <option value="$PROJECT_DIR$/src/test/java/Rack.java" />
         <option value="$PROJECT_DIR$/src/main/java/IVend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/IVend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vendables/Drink.java" />
         <option value="$PROJECT_DIR$/src/main/java/RackIdentifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rack.java" />
         <option value="$PROJECT_DIR$/src/main/java/coins/Coin.java" />
         <option value="$PROJECT_DIR$/src/main/java/coins/CoinValue.java" />
         <option value="$PROJECT_DIR$/src/test/java/CoinTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/RackTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/racks/Rack.java" />
         <option value="$PROJECT_DIR$/src/test/java/VendingMachine.java" />
-        <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/VendableItem.java" />
         <option value="$PROJECT_DIR$/src/test/java/CrispsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/DrinkTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SweetsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/Sweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vendables/Drink.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RackTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/VendingMachine.java" />
       </list>
     </option>
@@ -627,14 +647,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VendingMachine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VendingMachine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vendables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VendingMachine" type="b2602c69:ProjectViewProjectNode" />
@@ -686,7 +698,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.canDispenseItemIfCorrectCoinValueAndRackSelected">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.canReturnCoins">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -698,23 +710,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RackTest.canAddMultipleItemsSimultaneously" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RackTest" />
-      <option name="METHOD_NAME" value="canAddMultipleItemsSimultaneously" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -741,13 +736,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.canDispenseItemIfCorrectCoinValueAndRackSelected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.canReturnCoins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="canDispenseItemIfCorrectCoinValueAndRackSelected" />
+      <option name="METHOD_NAME" value="canReturnCoins" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -758,13 +753,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.coinsPendingStartsAtZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.changeAddedToChangeSlotIfOverpaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="coinsPendingStartsAtZero" />
+      <option name="METHOD_NAME" value="changeAddedToChangeSlotIfOverpaid" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="VendingMachineTest.changeSlotStartsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="changeSlotStartsEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -814,19 +826,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in VendingMachine_test" />
-      <item itemvalue="JUnit.RackTest.canAddMultipleItemsSimultaneously" />
-      <item itemvalue="JUnit.VendingMachineTest.coinsPendingStartsAtZero" />
       <item itemvalue="JUnit.VendingMachineTest" />
-      <item itemvalue="JUnit.VendingMachineTest.canDispenseItemIfCorrectCoinValueAndRackSelected" />
+      <item itemvalue="JUnit.VendingMachineTest.changeSlotStartsEmpty" />
+      <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
+      <item itemvalue="JUnit.VendingMachineTest.canReturnCoins" />
+      <item itemvalue="JUnit.All in VendingMachine_test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VendingMachineTest.canDispenseItemIfCorrectCoinValueAndRackSelected" />
-        <item itemvalue="JUnit.VendingMachineTest" />
-        <item itemvalue="JUnit.VendingMachineTest.coinsPendingStartsAtZero" />
-        <item itemvalue="JUnit.RackTest.canAddMultipleItemsSimultaneously" />
+        <item itemvalue="JUnit.VendingMachineTest.canReturnCoins" />
         <item itemvalue="JUnit.All in VendingMachine_test" />
+        <item itemvalue="JUnit.VendingMachineTest" />
+        <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
+        <item itemvalue="JUnit.VendingMachineTest.changeSlotStartsEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -844,35 +856,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RackTest - 2018.04.09 at 10h 16m 40s.xml">
-      <configuration name="RackTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 42m 31s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RackTest - 2018.04.09 at 10h 23m 15s.xml">
-      <configuration name="RackTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 42m 59s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoinTest - 2018.04.09 at 10h 34m 17s.xml">
-      <configuration name="CoinTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 43m 08s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoinTest - 2018.04.09 at 11h 00m 15s.xml">
-      <configuration name="CoinTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 43m 36s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoinTest - 2018.04.09 at 11h 00m 28s.xml">
-      <configuration name="CoinTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 46m 12s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VendingMachine_test - 2018.04.09 at 11h 02m 36s.xml">
-      <configuration name="All in VendingMachine_test" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 47m 01s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RackTest_canAddMultipleItemsSimultaneously - 2018.04.09 at 11h 31m 45s.xml">
-      <configuration name="RackTest.canAddMultipleItemsSimultaneously" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 47m 09s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_coinsPendingStartsAtZero - 2018.04.09 at 11h 51m 41s.xml">
-      <configuration name="VendingMachineTest.coinsPendingStartsAtZero" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 47m 41s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest - 2018.04.09 at 11h 57m 02s.xml">
-      <configuration name="VendingMachineTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 48m 25s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest - 2018.04.09 at 11h 59m 10s.xml">
-      <configuration name="VendingMachineTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 13h 00m 49s.xml">
+      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -896,12 +908,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32969698" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Build" weight="0.32969698" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" />
@@ -927,7 +939,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -936,6 +948,16 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>getCoinsPend</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>coinsPending.clear();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>rack1</expression-string>
         <language-id>JAVA</language-id>
@@ -954,28 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Drink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vendables/IVend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,22 +1027,6 @@
             <element signature="e#257#258#0" expanded="true" />
             <element signature="e#422#423#0" expanded="true" />
             <element signature="e#480#481#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/RackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1117,26 +1105,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Drink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="433">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1115#1116#0" expanded="true" />
             <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#2328#2329#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
           </folding>
         </state>
       </provider>

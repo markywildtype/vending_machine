@@ -53,7 +53,7 @@ public class VendingMachineTest {
 
     @Test
     public void coinsPendingStartsAtZero(){
-        assertEquals(0, vendingMachine.getCoinsPending());
+        assertEquals(0, vendingMachine.getCoinsPendingValue());
     }
 
     @Test
@@ -62,7 +62,7 @@ public class VendingMachineTest {
         vendingMachine.insertCoin(quarter);
         vendingMachine.insertCoin(dime);
         vendingMachine.insertCoin(nickel);
-        assertEquals(65, vendingMachine.getCoinsPending());
+        assertEquals(65, vendingMachine.getCoinsPendingValue());
     }
 
     @Test
@@ -79,5 +79,33 @@ public class VendingMachineTest {
         vendingMachine.insertCoin(nickel);
         assertEquals(crisps, vendingMachine.selectRack(rack1));
     }
+
+    @Test
+    public void changeSlotStartsEmpty(){
+        assertEquals(0, vendingMachine.getChangeSlot().size());
+    }
+
+    @Test
+    public void canReturnCoins(){
+        vendingMachine.insertCoin(quarter);
+        vendingMachine.insertCoin(quarter);
+        vendingMachine.insertCoin(dime);
+        vendingMachine.insertCoin(nickel);
+        vendingMachine.coinReturn();
+        assertEquals(4, vendingMachine.getChangeSlot().size());
+        assertEquals(65, vendingMachine.getChangeSlotValue());
+        assertEquals(0, vendingMachine.getCoinsPendingValue());
+    }
+
+//    @Test
+//    public void changeAddedToChangeSlotIfOverpaid(){
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(quarter);
+//        vendingMachine.insertCoin(dime);
+//        vendingMachine.insertCoin(nickel);
+//        vendingMachine.selectRack(rack1);
+//        assertEquals(quarter, vendingMachine.getChangeSlot().get(0));
+//    }
 
 }
