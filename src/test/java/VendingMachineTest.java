@@ -8,8 +8,6 @@ import vendables.Crisps;
 import vendables.Drink;
 import vendables.Sweet;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class VendingMachineTest {
@@ -66,6 +64,11 @@ public class VendingMachineTest {
     }
 
     @Test
+    public void coinsRetainedStartsAtZero(){
+        assertEquals(0, vendingMachine.getCoinsRetainedValue());
+    }
+
+    @Test
     public void canSelectRack(){
         vendingMachine.selectRack(rack1);
         assertEquals(true, rack1.getSelectedStatus());
@@ -83,11 +86,21 @@ public class VendingMachineTest {
     @Test
     public void canSelectRackThenAddCoinsToDispenseItem(){
         vendingMachine.selectRack(rack1);
+        vendingMachine.insertCoin(quarter, rack1);
+        vendingMachine.insertCoin(quarter, rack1);
+        vendingMachine.insertCoin(dime, rack1);
+        assertEquals(crisps, vendingMachine.insertCoin(nickel, rack1));
+    }
+
+    @Test
+    public void dispensingItemClearsPendingCoins(){
         vendingMachine.insertCoin(quarter);
         vendingMachine.insertCoin(quarter);
         vendingMachine.insertCoin(dime);
-        assertEquals(crisps, vendingMachine.insertCoin(nickel, rack1));
-
+        vendingMachine.insertCoin(nickel);
+        vendingMachine.selectRack(rack1);
+        assertEquals(0, vendingMachine.getCoinsPendingValue());
+        assertEquals(65, vendingMachine.getCoinsRetainedValue());
     }
 
     @Test
@@ -123,6 +136,25 @@ public class VendingMachineTest {
         vendingMachine.toggleServiceMode();
         vendingMachine.toggleServiceMode();
         assertEquals(false, vendingMachine.getServiceMode());
+    }
+
+    @Test
+    public void cannotAddToCoinsRetainedIfServiceModeOff(){
+        vendingMachine.addToCoinsRetained(dollar);
+        vendingMachine.addToCoinsRetained(quarter);
+        vendingMachine.addToCoinsRetained(dime);
+        vendingMachine.addToCoinsRetained(nickel);
+        assertEquals(0, vendingMachine.getCoinsRetained().size());
+    }
+
+    @Test
+    public void canAddToCoinsRetainedIfServiceModeOn(){
+        vendingMachine.toggleServiceMode();
+        vendingMachine.addToCoinsRetained(dollar);
+        vendingMachine.addToCoinsRetained(quarter);
+        vendingMachine.addToCoinsRetained(dime);
+        vendingMachine.addToCoinsRetained(nickel);
+        assertEquals(4, vendingMachine.getCoinsRetained().size());
     }
 
 //    @Test

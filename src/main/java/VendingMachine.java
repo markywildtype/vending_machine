@@ -1,6 +1,5 @@
 import coins.Coin;
 import racks.Rack;
-import vendables.IVend;
 import vendables.VendableItem;
 
 import java.util.ArrayList;
@@ -11,6 +10,7 @@ public class VendingMachine {
     private Rack rack2;
     private Rack rack3;
     private ArrayList<Coin> coinsPending;
+    private ArrayList<Coin> coinsRetained;
     private ArrayList<Coin> changeSlot;
     private boolean serviceMode;
 
@@ -19,6 +19,7 @@ public class VendingMachine {
         this.rack2 = rack2;
         this.rack3 = rack3;
         this.coinsPending = new ArrayList<>();
+        this.coinsRetained = new ArrayList<>();
         this.changeSlot = new ArrayList<>();
         this.serviceMode = false;
     }
@@ -36,6 +37,17 @@ public class VendingMachine {
         return coinValue;
     }
 
+    public ArrayList<Coin> getCoinsRetained(){
+        return this.coinsRetained;
+    }
+
+    public int getCoinsRetainedValue(){
+        int coinValue = 0;
+        for(Coin coin: coinsRetained){
+            coinValue += coin.getValue().numericalValue();
+        }
+        return coinValue;
+    }
 
     public void insertCoin(Coin coin) {
         this.coinsPending.add(coin);
@@ -47,20 +59,25 @@ public class VendingMachine {
         this.coinsPending.add(coin);
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
         if(rack.getSelectedStatus() == true && this.getCoinsPendingValue() >= item.getPrice()){
-            return (VendableItem) rack.dispenseItem();
+            return retainCoinsDispenseItem(rack);
         }
         return null;
     }
 
-    public VendableItem selectRack(Rack rack) {
+    public VendableItem selectRack(Rack rack){
         rack.selectRack();
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
-        if (this.getCoinsPendingValue() == item.getPrice()){
-            return (VendableItem) rack.dispenseItem();
+        if(this.getCoinsPendingValue() == item.getPrice()){
+            return retainCoinsDispenseItem(rack);
         }
         return null;
     }
 
+    public VendableItem retainCoinsDispenseItem(Rack rack){
+        this.coinsRetained.addAll(this.coinsPending);
+        this.coinsPending.clear();
+        return (VendableItem) rack.dispenseItem();
+    }
 
     public ArrayList<Coin> getChangeSlot(){
         return this.changeSlot;
@@ -86,9 +103,14 @@ public class VendingMachine {
     public void toggleServiceMode(){
         if(this.serviceMode == false){
             this.serviceMode = true;
-        } else if(this.serviceMode == true){
+        } else {
             this.serviceMode = false;
         }
+    }
 
+    public void addToCoinsRetained(Coin coin){
+        if(this.serviceMode == true) {
+            this.coinsRetained.add(coin);
+        }
     }
 }
