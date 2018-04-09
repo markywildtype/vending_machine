@@ -1,5 +1,7 @@
 import coins.Coin;
 import racks.Rack;
+import vendables.IVend;
+import vendables.VendableItem;
 
 import java.util.ArrayList;
 
@@ -23,5 +25,16 @@ public class VendingMachine {
             coinValue += coin.getValue().numericalValue();
         }
         return coinValue;
+    }
+
+    public void insertCoin(Coin coin) {
+        this.coinsPending.add(coin);
+    }
+
+    public VendableItem selectRack(Rack rack) {
+        rack.selectRack();
+        VendableItem item = (VendableItem) rack.getRackContents().get(0);
+        if (this.getCoinsPending() >= item.getPrice()){
+        } return (VendableItem) rack.dispenseItem();
     }
 }

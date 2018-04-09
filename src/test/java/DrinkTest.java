@@ -10,7 +10,7 @@ public class DrinkTest {
 
     @Before
     public void before(){
-        pepsiMax = new Drink("Pepsi Max",  1.50, 330);
+        pepsiMax = new Drink("Pepsi Max",  150, 330);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class DrinkTest {
 
     @Test
     public void hasPrice(){
-        assertEquals(1.50, pepsiMax.getPrice(), 0.01);
+        assertEquals(150, pepsiMax.getPrice(), 0.01);
     }
 
     @Test

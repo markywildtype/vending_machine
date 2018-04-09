@@ -10,7 +10,7 @@ public class SweetsTest {
 
     @Before
     public void before(){
-        skittles = new Sweet("Skittles", 0.65);
+        skittles = new Sweet("Skittles", 65);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class SweetsTest {
 
     @Test
     public void hasPrice(){
-        assertEquals(0.65, skittles.getPrice(), 0.01);
+        assertEquals(65, skittles.getPrice(), 0.01);
     }
 
 

@@ -3,9 +3,9 @@ package vendables;
 public abstract class VendableItem {
 
     private String name;
-    private double price;
+    private int price;
 
-    public VendableItem(String name, double price){
+    public VendableItem(String name, int price){
         this.name = name;
         this.price = price;
     }
@@ -14,7 +14,7 @@ public abstract class VendableItem {
         return this.name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return this.price;
     }
 }

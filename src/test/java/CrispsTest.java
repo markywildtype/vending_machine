@@ -10,7 +10,7 @@ public class CrispsTest {
 
     @Before
     public void before(){
-        monsterMunch = new Crisps("Monster Munch", 1.00);
+        monsterMunch = new Crisps("Monster Munch", 100);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class CrispsTest {
 
     @Test
     public void hasPrice(){
-        assertEquals(1.00, monsterMunch.getPrice(), 0.01);
+        assertEquals(100, monsterMunch.getPrice(), 0.01);
     }
 
 }
