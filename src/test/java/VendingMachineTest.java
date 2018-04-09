@@ -209,14 +209,22 @@ public class VendingMachineTest {
     @Test
     public void changeAddedToChangeSlotIfGreaterOverpaid(){
         vendingMachine.insertCoin(dollar);
-//        vendingMachine.insertCoin(quarter);
-//        vendingMachine.insertCoin(quarter);
-//        vendingMachine.insertCoin(quarter);
-//        vendingMachine.insertCoin(quarter);
-//        vendingMachine.insertCoin(dime);
-//        vendingMachine.insertCoin(nickel);
         vendingMachine.selectRack(rack1);
         assertEquals(2, vendingMachine.getChangeSlot().size());
+    }
+
+    @Test
+    public void givingChangeReducesCoinsRetained(){
+        ArrayList<Coin> coinArrayList = new ArrayList<>();
+        coinArrayList.add(nickel);
+        coinArrayList.add(dime);
+        coinArrayList.add(quarter);
+        coinArrayList.add(dollar);
+        vendingMachine.toggleServiceMode();
+        vendingMachine.addToCoinsRetained(coinArrayList);
+        vendingMachine.insertCoin(dollar);
+        vendingMachine.selectRack(rack1);
+        assertEquals(205, vendingMachine.getCoinsRetainedValue());
     }
 
 }

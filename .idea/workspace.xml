@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59eb59b6-b0f6-4c82-9ff7-24aec728a9fe" name="Default" comment="Crisps class created and initial tests created">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
     </list>
@@ -48,8 +47,8 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="122" column="49" lean-forward="true" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+            <state relative-caret-position="519">
+              <caret line="133" selection-start-line="133" selection-start-column="2" selection-end-line="137" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#600#601#0" expanded="true" />
@@ -60,10 +59,10 @@
                 <element signature="e#931#932#0" expanded="true" />
                 <element signature="e#3174#3175#0" expanded="true" />
                 <element signature="e#3212#3213#0" expanded="true" />
-                <element signature="e#3580#3581#0" expanded="true" />
-                <element signature="e#3619#3620#0" expanded="true" />
-                <element signature="e#4577#4578#0" expanded="true" />
-                <element signature="e#4622#4623#0" expanded="true" />
+                <element signature="e#5370#5371#0" expanded="true" />
+                <element signature="e#5409#5410#0" expanded="true" />
+                <element signature="e#6367#6368#0" expanded="true" />
+                <element signature="e#6412#6413#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +71,8 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
+            <state relative-caret-position="160">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1115#1116#0" expanded="true" />
@@ -99,6 +98,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>coinsREta</find>
+      <find>coinsReta</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -657,7 +662,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid">
+  <component name="RunManager" selected="JUnit.VendingMachineTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -669,23 +674,6 @@
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="VendingMachineTest.canAddItemsToRacksIfServiceModeOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="canAddItemsToRacksIfServiceModeOn" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -746,6 +734,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="givingChangeReducesCoinsRetained" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -785,19 +790,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VendingMachineTest.canAddItemsToRacksIfServiceModeOn" />
       <item itemvalue="JUnit.VendingMachineTest.canAddMultipleItemsToRacks" />
       <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
       <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" />
       <item itemvalue="JUnit.VendingMachineTest" />
+      <item itemvalue="JUnit.VendingMachineTest.givingChangeReducesCoinsRetained" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" />
         <item itemvalue="JUnit.VendingMachineTest" />
+        <item itemvalue="JUnit.VendingMachineTest.givingChangeReducesCoinsRetained" />
+        <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" />
         <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
         <item itemvalue="JUnit.VendingMachineTest.canAddMultipleItemsToRacks" />
-        <item itemvalue="JUnit.VendingMachineTest.canAddItemsToRacksIfServiceModeOn" />
       </list>
     </recent_temporary>
   </component>
@@ -815,34 +820,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 17h 14m 55s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest - 2018.04.09 at 18h 01m 20s.xml">
+    <history-entry file="VendingMachineTest - 2018.04.09 at 18h 24m 13s.xml">
       <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 15m 18s.xml">
+    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 31m 40s.xml">
       <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfOverpaid - 2018.04.09 at 18h 15m 24s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest - 2018.04.09 at 18h 35m 04s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 16m 31s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 18h 39m 21s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfOverpaid - 2018.04.09 at 18h 17m 05s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 18h 41m 50s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 19m 22s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 18h 50m 44s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 20m 34s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 18h 54m 29s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_changeAddedToChangeSlotIfGreaterOverpaid - 2018.04.09 at 18h 22m 36s.xml">
-      <configuration name="VendingMachineTest.changeAddedToChangeSlotIfGreaterOverpaid" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 19h 01m 29s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest - 2018.04.09 at 18h 24m 13s.xml">
+    <history-entry file="VendingMachineTest_givingChangeReducesCoinsRetained - 2018.04.09 at 19h 03m 57s.xml">
+      <configuration name="VendingMachineTest.givingChangeReducesCoinsRetained" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest - 2018.04.09 at 19h 11m 14s.xml">
       <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -857,7 +862,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
@@ -867,12 +871,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32969698" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Build" weight="0.32969698" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" />
@@ -1108,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        <state relative-caret-position="160">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1115#1116#0" expanded="true" />
@@ -1126,8 +1130,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="122" column="49" lean-forward="true" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+        <state relative-caret-position="519">
+          <caret line="133" selection-start-line="133" selection-start-column="2" selection-end-line="137" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
@@ -1138,10 +1142,10 @@
             <element signature="e#931#932#0" expanded="true" />
             <element signature="e#3174#3175#0" expanded="true" />
             <element signature="e#3212#3213#0" expanded="true" />
-            <element signature="e#3580#3581#0" expanded="true" />
-            <element signature="e#3619#3620#0" expanded="true" />
-            <element signature="e#4577#4578#0" expanded="true" />
-            <element signature="e#4622#4623#0" expanded="true" />
+            <element signature="e#5370#5371#0" expanded="true" />
+            <element signature="e#5409#5410#0" expanded="true" />
+            <element signature="e#6367#6368#0" expanded="true" />
+            <element signature="e#6412#6413#0" expanded="true" />
           </folding>
         </state>
       </provider>
