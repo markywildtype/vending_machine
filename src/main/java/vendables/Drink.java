@@ -1,6 +1,6 @@
 package vendables;
 
-public class Drink extends VendableItem {
+public class Drink extends VendableItem implements IVend {
 
     private int volume;
 
