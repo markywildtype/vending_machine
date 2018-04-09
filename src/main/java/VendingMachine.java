@@ -12,6 +12,7 @@ public class VendingMachine {
     private Rack rack3;
     private ArrayList<Coin> coinsPending;
     private ArrayList<Coin> changeSlot;
+    private boolean serviceMode;
 
     public VendingMachine(Rack rack1, Rack rack2, Rack rack3){
         this.rack1 = rack1;
@@ -19,6 +20,7 @@ public class VendingMachine {
         this.rack3 = rack3;
         this.coinsPending = new ArrayList<>();
         this.changeSlot = new ArrayList<>();
+        this.serviceMode = false;
     }
 
 
@@ -34,16 +36,31 @@ public class VendingMachine {
         return coinValue;
     }
 
+
     public void insertCoin(Coin coin) {
         this.coinsPending.add(coin);
+    }
+
+//Overloaded method for selecting rack first then adding coins:
+
+    public VendableItem insertCoin(Coin coin, Rack rack) {
+        this.coinsPending.add(coin);
+        VendableItem item = (VendableItem) rack.getRackContents().get(0);
+        if(rack.getSelectedStatus() == true && this.getCoinsPendingValue() >= item.getPrice()){
+            return (VendableItem) rack.dispenseItem();
+        }
+        return null;
     }
 
     public VendableItem selectRack(Rack rack) {
         rack.selectRack();
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
         if (this.getCoinsPendingValue() == item.getPrice()){
-        } return (VendableItem) rack.dispenseItem();
+            return (VendableItem) rack.dispenseItem();
+        }
+        return null;
     }
+
 
     public ArrayList<Coin> getChangeSlot(){
         return this.changeSlot;
@@ -62,4 +79,16 @@ public class VendingMachine {
         this.coinsPending.clear();
     }
 
+    public boolean getServiceMode(){
+        return this.serviceMode;
+    }
+
+    public void toggleServiceMode(){
+        if(this.serviceMode == false){
+            this.serviceMode = true;
+        } else if(this.serviceMode == true){
+            this.serviceMode = false;
+        }
+
+    }
 }

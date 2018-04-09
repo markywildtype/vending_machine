@@ -62,7 +62,7 @@ public class VendingMachineTest {
         vendingMachine.insertCoin(quarter);
         vendingMachine.insertCoin(dime);
         vendingMachine.insertCoin(nickel);
-        assertEquals(65, vendingMachine.getCoinsPendingValue());
+        assertEquals(4, vendingMachine.getCoinsPending().size());
     }
 
     @Test
@@ -81,6 +81,16 @@ public class VendingMachineTest {
     }
 
     @Test
+    public void canSelectRackThenAddCoinsToDispenseItem(){
+        vendingMachine.selectRack(rack1);
+        vendingMachine.insertCoin(quarter);
+        vendingMachine.insertCoin(quarter);
+        vendingMachine.insertCoin(dime);
+        assertEquals(crisps, vendingMachine.insertCoin(nickel, rack1));
+
+    }
+
+    @Test
     public void changeSlotStartsEmpty(){
         assertEquals(0, vendingMachine.getChangeSlot().size());
     }
@@ -95,6 +105,24 @@ public class VendingMachineTest {
         assertEquals(4, vendingMachine.getChangeSlot().size());
         assertEquals(65, vendingMachine.getChangeSlotValue());
         assertEquals(0, vendingMachine.getCoinsPendingValue());
+    }
+
+    @Test
+    public void hasServiceModeStatusStartsFalse(){
+        assertEquals(false, vendingMachine.getServiceMode());
+    }
+
+    @Test
+    public void canToggleServiceModeOn(){
+        vendingMachine.toggleServiceMode();
+        assertEquals(true, vendingMachine.getServiceMode());
+    }
+
+    @Test
+    public void canToggleServiceModeOff(){
+        vendingMachine.toggleServiceMode();
+        vendingMachine.toggleServiceMode();
+        assertEquals(false, vendingMachine.getServiceMode());
     }
 
 //    @Test

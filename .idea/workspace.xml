@@ -75,35 +75,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#600#601#0" expanded="true" />
                 <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#2177#2178#0" expanded="true" />
+                <element signature="e#2215#2216#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="281">
+              <caret line="115" column="41" lean-forward="true" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1115#1116#0" expanded="true" />
                 <element signature="e#1141#1142#0" expanded="true" />
                 <element signature="e#2328#2329#0" expanded="true" />
                 <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#3242#3243#0" expanded="true" />
+                <element signature="e#3272#3273#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -698,7 +702,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.canReturnCoins">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.canToggleServiceModeOff">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -719,30 +723,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.canSwitcghToServiceMode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="VendingMachineTest.canReturnCoins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="canReturnCoins" />
+      <option name="METHOD_NAME" value="canSwitcghToServiceMode" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -753,13 +740,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.changeAddedToChangeSlotIfOverpaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.canToggleServiceModeOff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="changeAddedToChangeSlotIfOverpaid" />
+      <option name="METHOD_NAME" value="canToggleServiceModeOff" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -770,13 +757,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.changeSlotStartsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.canToggleToServiceMode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="changeSlotStartsEmpty" />
+      <option name="METHOD_NAME" value="canToggleToServiceMode" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="VendingMachineTest.hasServiceModeStatusStartsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="hasServiceModeStatusStartsFalse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -826,19 +830,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VendingMachineTest" />
-      <item itemvalue="JUnit.VendingMachineTest.changeSlotStartsEmpty" />
-      <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
-      <item itemvalue="JUnit.VendingMachineTest.canReturnCoins" />
       <item itemvalue="JUnit.All in VendingMachine_test" />
+      <item itemvalue="JUnit.VendingMachineTest.hasServiceModeStatusStartsFalse" />
+      <item itemvalue="JUnit.VendingMachineTest.canSwitcghToServiceMode" />
+      <item itemvalue="JUnit.VendingMachineTest.canToggleToServiceMode" />
+      <item itemvalue="JUnit.VendingMachineTest.canToggleServiceModeOff" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VendingMachineTest.canReturnCoins" />
+        <item itemvalue="JUnit.VendingMachineTest.canToggleServiceModeOff" />
+        <item itemvalue="JUnit.VendingMachineTest.canToggleToServiceMode" />
+        <item itemvalue="JUnit.VendingMachineTest.canSwitcghToServiceMode" />
+        <item itemvalue="JUnit.VendingMachineTest.hasServiceModeStatusStartsFalse" />
         <item itemvalue="JUnit.All in VendingMachine_test" />
-        <item itemvalue="JUnit.VendingMachineTest" />
-        <item itemvalue="JUnit.VendingMachineTest.changeAddedToChangeSlotIfOverpaid" />
-        <item itemvalue="JUnit.VendingMachineTest.changeSlotStartsEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -856,24 +860,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 42m 31s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 42m 59s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 43m 08s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 43m 36s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 46m 12s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 47m 01s.xml">
-      <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 12h 47m 09s.xml">
       <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
     </history-entry>
@@ -885,6 +871,24 @@
     </history-entry>
     <history-entry file="VendingMachineTest_canReturnCoins - 2018.04.09 at 13h 00m 49s.xml">
       <configuration name="VendingMachineTest.canReturnCoins" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_canAddCoinsToCoinsPending - 2018.04.09 at 13h 12m 00s.xml">
+      <configuration name="VendingMachineTest.canAddCoinsToCoinsPending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_canSelectRackThenAddCoinsToDispenseItem - 2018.04.09 at 13h 38m 55s.xml">
+      <configuration name="VendingMachineTest.canSelectRackThenAddCoinsToDispenseItem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VendingMachine_test - 2018.04.09 at 13h 40m 13s.xml">
+      <configuration name="All in VendingMachine_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_hasServiceModeStatusStartsFalse - 2018.04.09 at 13h 44m 10s.xml">
+      <configuration name="VendingMachineTest.hasServiceModeStatusStartsFalse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_canSwitcghToServiceMode - 2018.04.09 at 13h 46m 41s.xml">
+      <configuration name="VendingMachineTest.canSwitcghToServiceMode" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_canToggleToServiceMode - 2018.04.09 at 13h 47m 45s.xml">
+      <configuration name="VendingMachineTest.canToggleToServiceMode" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1139,32 +1143,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="281">
+          <caret line="115" column="41" lean-forward="true" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1115#1116#0" expanded="true" />
             <element signature="e#1141#1142#0" expanded="true" />
             <element signature="e#2328#2329#0" expanded="true" />
             <element signature="e#2394#2395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
           </folding>
         </state>
       </provider>
