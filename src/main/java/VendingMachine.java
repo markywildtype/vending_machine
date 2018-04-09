@@ -1,8 +1,11 @@
 import coins.Coin;
 import racks.Rack;
+import vendables.Crisps;
+import vendables.IVend;
 import vendables.VendableItem;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class VendingMachine {
 
@@ -109,8 +112,34 @@ public class VendingMachine {
     }
 
     public void addToCoinsRetained(Coin coin){
-        if(this.serviceMode == true) {
+        if(this.serviceMode == true){
             this.coinsRetained.add(coin);
         }
+    }
+
+//Overloaded method to add multiple coins at the same time:
+
+    public void addToCoinsRetained(ArrayList<Coin> coinArrayList){
+        if(this.serviceMode == true){
+            this.coinsRetained.addAll(coinArrayList);
+        }
+    }
+
+    public void addToRack(Rack rack, IVend item){
+        if(serviceMode == true) {
+            rack.addItem(item);
+        }
+    }
+
+//Overloaded method to add multiple items to a rack:
+
+    public void addToRack(Rack rack, ArrayList<IVend> itemArrayList){
+        if(serviceMode == true) {
+            rack.addMultiple(itemArrayList);
+        }
+    }
+
+    public ArrayList<IVend> getRackContents(Rack rack){
+        return rack.getRackContents();
     }
 }

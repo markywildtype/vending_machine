@@ -6,7 +6,10 @@ import racks.Rack;
 import racks.RackIdentifier;
 import vendables.Crisps;
 import vendables.Drink;
+import vendables.IVend;
 import vendables.Sweet;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -155,6 +158,41 @@ public class VendingMachineTest {
         vendingMachine.addToCoinsRetained(dime);
         vendingMachine.addToCoinsRetained(nickel);
         assertEquals(4, vendingMachine.getCoinsRetained().size());
+    }
+
+    @Test
+    public void canAddMultipleCoinsToCoinsRetained(){
+        ArrayList<Coin> coinArrayList = new ArrayList<>();
+        coinArrayList.add(nickel);
+        coinArrayList.add(dime);
+        coinArrayList.add(quarter);
+        coinArrayList.add(dollar);
+        vendingMachine.toggleServiceMode();
+        vendingMachine.addToCoinsRetained(coinArrayList);
+        assertEquals(4, vendingMachine.getCoinsRetained().size());
+    }
+
+    @Test
+    public void cannotAddItemsToRacksIfServiceModeOff(){
+        vendingMachine.addToRack(rack1, crisps);
+        assertEquals(3, vendingMachine.getRackContents(rack1).size());
+    }
+
+    @Test
+    public void canAddItemsToRacksIfServiceModeOn(){
+        vendingMachine.toggleServiceMode();
+        vendingMachine.addToRack(rack1, crisps);
+        assertEquals(4, vendingMachine.getRackContents(rack1).size());
+    }
+
+    @Test
+    public void canAddMultipleItemsToRacks(){
+        vendingMachine.toggleServiceMode();
+        ArrayList<IVend> itemArrayList = new ArrayList<>();
+        itemArrayList.add(crisps);
+        itemArrayList.add(crisps);
+        vendingMachine.addToRack(rack1, itemArrayList);
+        assertEquals(5, vendingMachine.getRackContents(rack1).size());
     }
 
 //    @Test
