@@ -27,6 +27,7 @@ public class VendingMachine {
         this.serviceMode = false;
     }
 
+//Getters:
 
     public ArrayList<Coin> getCoinsPending(){
         return this.coinsPending;
@@ -52,10 +53,23 @@ public class VendingMachine {
         return coinValue;
     }
 
+    public ArrayList<Coin> getChangeSlot(){
+        return this.changeSlot;
+    }
+
+    public int getChangeSlotValue(){
+        int coinValue = 0;
+        for(Coin coin: this.changeSlot){
+            coinValue += coin.getValue().numericalValue();
+        }
+        return coinValue;
+    }
+
     public void insertCoin(Coin coin) {
         this.coinsPending.add(coin);
     }
 
+//Methods for paying/dispensing items:
 //Overloaded method for selecting rack first then adding coins:
 
     public VendableItem insertCoin(Coin coin, Rack rack) {
@@ -85,45 +99,27 @@ public class VendingMachine {
         return (VendableItem) rack.dispenseItem();
     }
 
+//Methods for generating change and removing it from coinsRetained:
+
     public void makeChange(VendableItem item){
         int difference = this.getCoinsPendingValue() - item.getPrice();
         int iterations = difference / 25;
         switch(difference % 25){
             case 0:
                 changeWhileLoop(iterations);
-//                while(iterations > 0) {
-//                    changeSlot.add(new Coin(CoinValue.QUARTER));
-//                    coinsRetainedChangeRemover(CoinValue.QUARTER);
-//                    iterations--;
-//                }
                 break;
             case 5:
                 changeWhileLoop(iterations);
-//                while(iterations > 0){
-//                    this.changeSlot.add(new Coin(CoinValue.QUARTER));
-//                    coinsRetainedChangeRemover(CoinValue.QUARTER);
-//                    iterations--;
-//                }
                 this.changeSlot.add(new Coin(CoinValue.NICKEL));
                 coinsRetainedChangeRemover(CoinValue.NICKEL);
                 break;
             case 10:
                 changeWhileLoop(iterations);
-//                while(iterations > 0){
-//                    this.changeSlot.add(new Coin(CoinValue.QUARTER));
-//                    coinsRetainedChangeRemover(CoinValue.QUARTER);
-//                    iterations--;
-//                }
                 this.changeSlot.add(new Coin(CoinValue.DIME));
                 coinsRetainedChangeRemover(CoinValue.DIME);
                 break;
             case 15:
                 changeWhileLoop(iterations);
-//                while(iterations > 0){
-//                    this.changeSlot.add(new Coin(CoinValue.QUARTER));
-//                    coinsRetainedChangeRemover(CoinValue.QUARTER);
-//                    iterations--;
-//                }
                 this.changeSlot.add(new Coin(CoinValue.DIME));
                 coinsRetainedChangeRemover(CoinValue.DIME);
                 this.changeSlot.add(new Coin(CoinValue.NICKEL));
@@ -131,41 +127,11 @@ public class VendingMachine {
                 break;
             case 20:
                 changeWhileLoop(iterations);
-//                while(iterations > 0){
-//                    this.changeSlot.add(new Coin(CoinValue.QUARTER));
-//                    coinsRetainedChangeRemover(CoinValue.QUARTER);
-//                    iterations--;
-//                }
                 this.changeSlot.add(new Coin(CoinValue.DIME));
                 coinsRetainedChangeRemover(CoinValue.DIME);
                 this.changeSlot.add(new Coin(CoinValue.DIME));
                 coinsRetainedChangeRemover(CoinValue.DIME);
                 break;
-        }
-    }
-
-    public ArrayList<Coin> getChangeSlot(){
-        return this.changeSlot;
-    }
-
-    public int getChangeSlotValue(){
-        int coinValue = 0;
-        for(Coin coin: this.changeSlot){
-            coinValue += coin.getValue().numericalValue();
-        }
-        return coinValue;
-    }
-
-    public void coinReturn(){
-        this.changeSlot.addAll(this.coinsPending);
-        this.coinsPending.clear();
-    }
-
-    public void coinsRetainedChangeRemover(CoinValue coinValue) {
-        Iterator<Coin> iter = this.coinsRetained.iterator();
-        while (iter.hasNext()) {
-            Coin c = iter.next();
-            if (c.getValue() == coinValue) iter.remove();
         }
     }
 
@@ -176,6 +142,22 @@ public class VendingMachine {
             iterations--;
         }
     }
+
+    public void coinsRetainedChangeRemover(CoinValue coinValue) {
+        Iterator<Coin> iter = this.coinsRetained.iterator();
+        while (iter.hasNext()) {
+            Coin c = iter.next();
+            if (c.getValue() == coinValue) iter.remove();
+        }
+    }
+
+    public void coinReturn(){
+        this.changeSlot.addAll(this.coinsPending);
+        this.coinsPending.clear();
+    }
+
+
+//Service mode methods:
 
     public boolean getServiceMode(){
         return this.serviceMode;
