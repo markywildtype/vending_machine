@@ -1,5 +1,4 @@
-import coins.Coin;
-import coins.CoinValue;
+import coins.*;
 import org.junit.Before;
 import org.junit.Test;
 import racks.Rack;
@@ -22,20 +21,20 @@ public class VendingMachineTest {
     Crisps crisps;
     Sweet sweets;
     Drink drink;
-    Coin nickel;
-    Coin dime;
-    Coin quarter;
-    Coin dollar;
+    Nickel nickel;
+    Dime dime;
+    Quarter quarter;
+    Dollar dollar;
 
     @Before
     public void before(){
         crisps = new Crisps("Nik Naks", 65);
         sweets = new Sweet("Double Decker", 100);
         drink = new Drink("Irn Bru", 90, 150);
-        nickel = new Coin(CoinValue.NICKEL);
-        dime = new Coin(CoinValue.DIME);
-        quarter = new Coin(CoinValue.QUARTER);
-        dollar = new Coin(CoinValue.DOLLAR);
+        nickel = new Nickel();
+        dime = new Dime();
+        quarter = new Quarter();
+        dollar = new Dollar();
         rack1 = new Rack(RackIdentifier.A);
         rack1.addItem(crisps);
         rack1.addItem(crisps);
@@ -162,7 +161,7 @@ public class VendingMachineTest {
 
     @Test
     public void canAddMultipleCoinsToCoinsRetained(){
-        ArrayList<Coin> coinArrayList = new ArrayList<>();
+        ArrayList<ICoin> coinArrayList = new ArrayList<>();
         coinArrayList.add(nickel);
         coinArrayList.add(dime);
         coinArrayList.add(quarter);
@@ -215,7 +214,7 @@ public class VendingMachineTest {
 
     @Test
     public void givingChangeReducesCoinsRetained(){
-        ArrayList<Coin> coinArrayList = new ArrayList<>();
+        ArrayList<ICoin> coinArrayList = new ArrayList<>();
         coinArrayList.add(nickel);
         coinArrayList.add(dime);
         coinArrayList.add(quarter);

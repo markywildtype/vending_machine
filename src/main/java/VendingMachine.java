@@ -1,5 +1,4 @@
-import coins.Coin;
-import coins.CoinValue;
+import coins.*;
 import racks.Rack;
 import vendables.IVend;
 import vendables.VendableItem;
@@ -12,9 +11,9 @@ public class VendingMachine {
     private Rack rack1;
     private Rack rack2;
     private Rack rack3;
-    private ArrayList<Coin> coinsPending;
-    private ArrayList<Coin> coinsRetained;
-    private ArrayList<Coin> changeSlot;
+    private ArrayList<ICoin> coinsPending;
+    private ArrayList<ICoin> coinsRetained;
+    private ArrayList<ICoin> changeSlot;
     private boolean serviceMode;
 
     public VendingMachine(Rack rack1, Rack rack2, Rack rack3){
@@ -29,50 +28,50 @@ public class VendingMachine {
 
 //Getters:
 
-    public ArrayList<Coin> getCoinsPending(){
+    public ArrayList<ICoin> getCoinsPending(){
         return this.coinsPending;
     }
 
     public int getCoinsPendingValue(){
         int coinValue = 0;
-        for(Coin coin: coinsPending){
-            coinValue += coin.getValue().numericalValue();
+        for(ICoin coin: coinsPending){
+            coinValue += coin.getCoinValue();
         }
         return coinValue;
     }
 
-    public ArrayList<Coin> getCoinsRetained(){
+    public ArrayList<ICoin> getCoinsRetained(){
         return this.coinsRetained;
     }
 
     public int getCoinsRetainedValue(){
         int coinValue = 0;
-        for(Coin coin: coinsRetained){
-            coinValue += coin.getValue().numericalValue();
+        for(ICoin coin: coinsRetained){
+            coinValue += coin.getCoinValue();
         }
         return coinValue;
     }
 
-    public ArrayList<Coin> getChangeSlot(){
+    public ArrayList<ICoin> getChangeSlot(){
         return this.changeSlot;
     }
 
     public int getChangeSlotValue(){
         int coinValue = 0;
-        for(Coin coin: this.changeSlot){
-            coinValue += coin.getValue().numericalValue();
+        for(ICoin coin: this.changeSlot){
+            coinValue += coin.getCoinValue();
         }
         return coinValue;
     }
 
-    public void insertCoin(Coin coin) {
+    public void insertCoin(ICoin coin) {
         this.coinsPending.add(coin);
     }
 
 //Methods for paying/dispensing items:
 //Overloaded method for selecting rack first then adding coins:
 
-    public VendableItem insertCoin(Coin coin, Rack rack) {
+    public VendableItem insertCoin(ICoin coin, Rack rack) {
         this.coinsPending.add(coin);
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
         if(rack.getSelectedStatus() == true && this.getCoinsPendingValue() >= item.getPrice()){
@@ -110,44 +109,44 @@ public class VendingMachine {
                 break;
             case 5:
                 changeWhileLoop(iterations);
-                this.changeSlot.add(new Coin(CoinValue.NICKEL));
-                coinsRetainedChangeRemover(CoinValue.NICKEL);
+                this.changeSlot.add(new Nickel());
+                coinsRetainedChangeRemover(5);
                 break;
             case 10:
                 changeWhileLoop(iterations);
-                this.changeSlot.add(new Coin(CoinValue.DIME));
-                coinsRetainedChangeRemover(CoinValue.DIME);
+                this.changeSlot.add(new Dime());
+                coinsRetainedChangeRemover(10);
                 break;
             case 15:
                 changeWhileLoop(iterations);
-                this.changeSlot.add(new Coin(CoinValue.DIME));
-                coinsRetainedChangeRemover(CoinValue.DIME);
-                this.changeSlot.add(new Coin(CoinValue.NICKEL));
-                coinsRetainedChangeRemover(CoinValue.NICKEL);
+                this.changeSlot.add(new Dime());
+                coinsRetainedChangeRemover(10);
+                this.changeSlot.add(new Nickel());
+                coinsRetainedChangeRemover(5);
                 break;
             case 20:
                 changeWhileLoop(iterations);
-                this.changeSlot.add(new Coin(CoinValue.DIME));
-                coinsRetainedChangeRemover(CoinValue.DIME);
-                this.changeSlot.add(new Coin(CoinValue.DIME));
-                coinsRetainedChangeRemover(CoinValue.DIME);
+                this.changeSlot.add(new Dime());
+                coinsRetainedChangeRemover(10);
+                this.changeSlot.add(new Dime());
+                coinsRetainedChangeRemover(10);
                 break;
         }
     }
 
     public void changeWhileLoop(int iterations){
         while(iterations > 0) {
-            changeSlot.add(new Coin(CoinValue.QUARTER));
-            coinsRetainedChangeRemover(CoinValue.QUARTER);
+            changeSlot.add(new Quarter());
+            coinsRetainedChangeRemover(25);
             iterations--;
         }
     }
 
-    public void coinsRetainedChangeRemover(CoinValue coinValue) {
-        Iterator<Coin> iter = this.coinsRetained.iterator();
+    public void coinsRetainedChangeRemover(int coinValue) {
+        Iterator<ICoin> iter = this.coinsRetained.iterator();
         while (iter.hasNext()) {
-            Coin c = iter.next();
-            if (c.getValue() == coinValue) iter.remove();
+            ICoin c = iter.next();
+            if (c.getCoinValue() == coinValue) iter.remove();
         }
     }
 
@@ -171,7 +170,7 @@ public class VendingMachine {
         }
     }
 
-    public void addToCoinsRetained(Coin coin){
+    public void addToCoinsRetained(ICoin coin){
         if(this.serviceMode == true){
             this.coinsRetained.add(coin);
         }
@@ -179,7 +178,7 @@ public class VendingMachine {
 
 //Overloaded method to add multiple coins:
 
-    public void addToCoinsRetained(ArrayList<Coin> coinArrayList){
+    public void addToCoinsRetained(ArrayList<ICoin> coinArrayList){
         if(this.serviceMode == true){
             this.coinsRetained.addAll(coinArrayList);
         }
