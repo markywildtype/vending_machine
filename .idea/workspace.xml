@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59eb59b6-b0f6-4c82-9ff7-24aec728a9fe" name="Default" comment="Crisps class created and initial tests created">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -35,17 +34,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Crisps.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VendableItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vendables/VendableItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Crisps.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#223#224#0" expanded="true" />
-              </folding>
+              <caret line="4" selection-start-line="4" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -77,58 +79,6 @@
                 <element signature="e#326#327#0" expanded="true" />
                 <element signature="e#354#355#0" expanded="true" />
                 <element signature="e#387#388#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-911">
-              <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7978#7979#0" expanded="true" />
-                <element signature="e#8018#8019#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#1694#1695#0" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
-                <element signature="e#6010#6011#0" expanded="true" />
-                <element signature="e#6055#6056#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2316">
-              <caret line="236" column="62" lean-forward="true" selection-start-line="236" selection-start-column="62" selection-end-line="236" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7350#7351#0" expanded="true" />
-                <element signature="e#7380#7381#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -620,12 +570,12 @@
         <option value="$PROJECT_DIR$/src/main/java/coins/CoinAbs.java" />
         <option value="$PROJECT_DIR$/src/main/java/coins/Dollar.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/IVend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/Drink.java" />
         <option value="$PROJECT_DIR$/src/main/java/vendables/Sweet.java" />
         <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vendables/Crisps.java" />
       </list>
     </option>
   </component>
@@ -770,6 +720,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="CrispsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CrispsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="VendingMachineTest.canGetSelectedRack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -794,23 +761,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
       <option name="METHOD_NAME" value="canSelectRackThenAddCoinsToDispenseItem" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="VendingMachineTest.hasArrayListOfRacks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="hasArrayListOfRacks" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -862,17 +812,17 @@
     <list>
       <item itemvalue="JUnit.All in VendingMachine_test" />
       <item itemvalue="Application.Runner" />
-      <item itemvalue="JUnit.VendingMachineTest.hasArrayListOfRacks" />
       <item itemvalue="JUnit.VendingMachineTest.canGetSelectedRack" />
       <item itemvalue="JUnit.VendingMachineTest.canSelectRackThenAddCoinsToDispenseItem" />
+      <item itemvalue="JUnit.CrispsTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in VendingMachine_test" />
+        <item itemvalue="JUnit.CrispsTest" />
         <item itemvalue="JUnit.VendingMachineTest.canSelectRackThenAddCoinsToDispenseItem" />
         <item itemvalue="Application.Runner" />
         <item itemvalue="JUnit.VendingMachineTest.canGetSelectedRack" />
-        <item itemvalue="JUnit.VendingMachineTest.hasArrayListOfRacks" />
       </list>
     </recent_temporary>
   </component>
@@ -890,12 +840,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_VendingMachine_test - 2018.04.10 at 11h 33m 05s.xml">
-      <configuration name="All in VendingMachine_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DollarTest - 2018.04.10 at 11h 37m 06s.xml">
-      <configuration name="DollarTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DollarTest - 2018.04.10 at 11h 37m 32s.xml">
       <configuration name="DollarTest" configurationId="JUnit" />
     </history-entry>
@@ -920,6 +864,12 @@
     <history-entry file="VendingMachineTest_canSelectRackThenAddCoinsToDispenseItem - 2018.04.12 at 18h 34m 55s.xml">
       <configuration name="VendingMachineTest.canSelectRackThenAddCoinsToDispenseItem" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VendingMachineTest_canSelectRackThenAddCoinsToDispenseItem - 2018.04.12 at 18h 38m 48s.xml">
+      <configuration name="VendingMachineTest.canSelectRackThenAddCoinsToDispenseItem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VendingMachine_test - 2018.04.12 at 18h 38m 59s.xml">
+      <configuration name="All in VendingMachine_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -942,12 +892,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32969698" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Build" weight="0.32969698" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info anchor="right" id="Gradle" />
@@ -1243,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/VendableItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vendables/IVend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1266,19 +1209,6 @@
             <element signature="e#139#140#0" expanded="true" />
             <element signature="e#171#172#0" expanded="true" />
             <element signature="e#208#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1341,10 +1271,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="236" column="62" lean-forward="true" selection-start-line="236" selection-start-column="62" selection-end-line="236" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7350#7351#0" expanded="true" />
+            <element signature="e#7380#7381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        <state relative-caret-position="240">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#969#970#0" expanded="true" />
@@ -1363,15 +1305,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/VendableItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2316">
-          <caret line="236" column="62" lean-forward="true" selection-start-line="236" selection-start-column="62" selection-end-line="236" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7350#7351#0" expanded="true" />
-            <element signature="e#7380#7381#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendables/Crisps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="6" />
         </state>
       </provider>
     </entry>

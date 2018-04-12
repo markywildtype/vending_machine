@@ -1,21 +1,9 @@
 package vendables;
 
-public class Sweet implements IVend {
-
-    private String name;
-    private int price;
+public class Sweet extends VendableItem implements IVend {
 
     public Sweet(String name, int price){
-//        super(name, price);
-        this.price = price;
-        this.name = name;
+        super(name, price);
     }
 
-    public String getName(){
-        return this.name;
-    }
-
-    public int getPrice(){
-        return this.price;
-    }
 }
