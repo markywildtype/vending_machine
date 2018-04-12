@@ -27,6 +27,8 @@ public class Runner {
         rackC.addItem(drink);
         rackC.addItem(drink);
         rackC.addItem(drink);
+        Rack rackP = new Rack(RackIdentifier.F);
+
         VendingMachine vendingMachine = new VendingMachine(rackA, rackB, rackC);
         Nickel nickel = new Nickel();
         Dime dime = new Dime();
@@ -89,7 +91,7 @@ public class Runner {
         String item = reader.next().toUpperCase();
 
         Boolean selectionMade = false;
-
+        Rack selectedRack = rackP;
         IVend selectedItem = new Sweet("placeholder", 12);
 
         do {
@@ -123,12 +125,26 @@ public class Runner {
             }
         } while(selectionMade == false);
 
+//        int totalInserted = vendingMachine.getCoinsPendingValue();
+//        User behaviour on front end - picks a coin from displayed options:
+//        ICoin chosenCoin = userAvailableCoins.get()
+//        vendingMachine.insertCoin(chosenCoin);
+
+//        do {
+//            if(!checkAgainstPrice(totalInserted, selectedItem.getPrice())){
+//                System.out.println(totalInserted + " inserted, please insert more coins.");
+//                User picks a new coin from displayed options:
+//                vendingMachine.insertCoin(new Coin of the type chose by user());
+//            } else break;
+//        }
+//        while(!checkAgainstPrice(totalInserted, selectedItem.getPrice()));
+
+
+
         int totalInserted = 0;
 
         Scanner coinReader = new Scanner(System.in);
         int coinValue = Integer.parseInt(coinReader.next());
-
-        System.out.println(selectedItem.getName());
 
         do {
             totalInserted += coinValue;
@@ -139,9 +155,8 @@ public class Runner {
         }
         while(!checkAgainstPrice(totalInserted, selectedItem.getPrice()));
 
-//        ICoin coin1 = createCoin(coinValue);
-//        totalInserted += coinValue;
-//        System.out.println("You have inserted " + totalInserted + "c");
+        IVend dispensedItem = vendingMachine.retainCoinsDispenseItem(vendingMachine.getSelectedRack());
+        System.out.println("Thank you! Enjoy your " + dispensedItem.getName() + "!");
 
     }
 

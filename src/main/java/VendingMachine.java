@@ -8,18 +8,23 @@ import java.util.Iterator;
 
 public class VendingMachine {
 
-    private Rack rack1;
-    private Rack rack2;
-    private Rack rack3;
+//    private Rack rack1;
+//    private Rack rack2;
+//    private Rack rack3;
+    private ArrayList<Rack> racks;
     private ArrayList<ICoin> coinsPending;
     private ArrayList<ICoin> coinsRetained;
     private ArrayList<ICoin> changeSlot;
     private boolean serviceMode;
 
     public VendingMachine(Rack rack1, Rack rack2, Rack rack3){
-        this.rack1 = rack1;
-        this.rack2 = rack2;
-        this.rack3 = rack3;
+//        this.rack1 = rack1;
+//        this.rack2 = rack2;
+//        this.rack3 = rack3;
+        this.racks = new ArrayList<>();
+        this.racks.add(rack1);
+        this.racks.add(rack2);
+        this.racks.add(rack3);
         this.coinsPending = new ArrayList<>();
         this.coinsRetained = new ArrayList<>();
         this.changeSlot = new ArrayList<>();
@@ -27,6 +32,19 @@ public class VendingMachine {
     }
 
 //Getters:
+
+    public ArrayList<Rack> getRacks(){
+        return this.racks;
+    }
+
+    public Rack getSelectedRack(){
+        for(Rack rack: racks){
+            if(rack.getSelectedStatus()){
+                return rack;
+            }
+        }
+        return null;
+    }
 
     public ArrayList<ICoin> getCoinsPending(){
         return this.coinsPending;
@@ -71,7 +89,7 @@ public class VendingMachine {
 //Methods for paying/dispensing items:
 //Overloaded method for selecting rack first then adding coins:
 
-    public VendableItem insertCoin(ICoin coin, Rack rack) {
+    public IVend insertCoin(ICoin coin, Rack rack) {
         this.coinsPending.add(coin);
         VendableItem item = (VendableItem) rack.getRackContents().get(0);
         if(rack.getSelectedStatus() == true && this.getCoinsPendingValue() >= item.getPrice()){
@@ -80,7 +98,7 @@ public class VendingMachine {
         return null;
     }
 
-    public VendableItem selectRack(Rack rack){
+    public IVend selectRack(Rack rack){
         rack.selectRack();
         IVend item = rack.getRackContents().get(0);
         if(this.getCoinsPendingValue() == item.getPrice()){
@@ -92,10 +110,10 @@ public class VendingMachine {
             return null;
     }
 
-    public VendableItem retainCoinsDispenseItem(Rack rack){
+    public IVend retainCoinsDispenseItem(Rack rack){
         this.coinsRetained.addAll(this.coinsPending);
         this.coinsPending.clear();
-        return (VendableItem) rack.dispenseItem();
+        return rack.dispenseItem();
     }
 
 //Methods for generating change and removing it from coinsRetained:

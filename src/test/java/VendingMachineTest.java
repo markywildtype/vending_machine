@@ -226,4 +226,15 @@ public class VendingMachineTest {
         assertEquals(205, vendingMachine.getCoinsRetainedValue());
     }
 
+    @Test
+    public void hasArrayListOfRacks(){
+        assertEquals(3, vendingMachine.getRacks().size());
+    }
+
+    @Test
+    public void canGetSelectedRack(){
+        vendingMachine.selectRack(rack2);
+        assertEquals(rack2, vendingMachine.getSelectedRack());
+    }
+
 }
