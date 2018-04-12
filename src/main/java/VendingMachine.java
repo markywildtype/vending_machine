@@ -8,9 +8,6 @@ import java.util.Iterator;
 
 public class VendingMachine {
 
-//    private Rack rack1;
-//    private Rack rack2;
-//    private Rack rack3;
     private ArrayList<Rack> racks;
     private ArrayList<ICoin> coinsPending;
     private ArrayList<ICoin> coinsRetained;
@@ -18,9 +15,6 @@ public class VendingMachine {
     private boolean serviceMode;
 
     public VendingMachine(Rack rack1, Rack rack2, Rack rack3){
-//        this.rack1 = rack1;
-//        this.rack2 = rack2;
-//        this.rack3 = rack3;
         this.racks = new ArrayList<>();
         this.racks.add(rack1);
         this.racks.add(rack2);
@@ -91,8 +85,8 @@ public class VendingMachine {
 
     public IVend insertCoin(ICoin coin, Rack rack) {
         this.coinsPending.add(coin);
-        VendableItem item = (VendableItem) rack.getRackContents().get(0);
-        if(rack.getSelectedStatus() == true && this.getCoinsPendingValue() >= item.getPrice()){
+        IVend item = rack.getRackContents().get(0);
+        if(rack.getSelectedStatus() && this.getCoinsPendingValue() >= item.getPrice()){
             return retainCoinsDispenseItem(rack);
         }
         return null;

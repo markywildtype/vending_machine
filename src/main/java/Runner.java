@@ -3,8 +3,10 @@ import racks.Rack;
 import racks.RackIdentifier;
 import vendables.*;
 
+import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Runner {
@@ -139,63 +141,61 @@ public class Runner {
 //        }
 //        while(!checkAgainstPrice(totalInserted, selectedItem.getPrice()));
 
-
-
-        int totalInserted = 0;
+        int[] allowedValues = {5, 10, 25, 100};
+//        int totalInserted = 0;
+        ArrayList<Integer> totalInserted = new ArrayList<>();
 
         Scanner coinReader = new Scanner(System.in);
+
         int coinValue = Integer.parseInt(coinReader.next());
 
+        int change = 0;
+
         do {
-            totalInserted += coinValue;
-            if(!checkAgainstPrice(totalInserted, selectedItem.getPrice())){
-                System.out.println(totalInserted + " inserted, please insert more coins.");
+            totalInserted.add(coinValue);
+            if(!checkAgainstPrice(sumArray(totalInserted), selectedItem.getPrice())){
+                System.out.println(sumArray(totalInserted) + " inserted, please insert more coins.");
                 coinValue = Integer.parseInt(coinReader.next());
-            } else break;
+            } else {
+                if(sumArray(totalInserted) > selectedItem.getPrice()){
+                    change += (sumArray(totalInserted) - selectedItem.getPrice());
+                    System.out.println("Please take your " + change + "c change!");
+                }
+                else break;}
         }
-        while(!checkAgainstPrice(totalInserted, selectedItem.getPrice()));
+        while(!checkAgainstPrice(sumArray(totalInserted), selectedItem.getPrice()));
 
         IVend dispensedItem = vendingMachine.retainCoinsDispenseItem(vendingMachine.getSelectedRack());
-        System.out.println("Thank you! Enjoy your " + dispensedItem.getName() + "!");
+        System.out.println("Thank you for your custom. Enjoy your " + dispensedItem.getName() + "!");
 
     }
 
-    public static ICoin createCoin(int denomination){
-        switch(denomination){
-            case 5:
-                return new Nickel();
-            case 10:
-                return new Dime();
-            case 25:
-                return new Quarter();
-            case 100:
-                return new Dollar();
-            default:
-            break;
-        }
-    return null;
-    }
+//    public static ICoin createCoin(int denomination){
+//        switch(denomination){
+//            case 5:
+//                return new Nickel();
+//            case 10:
+//                return new Dime();
+//            case 25:
+//                return new Quarter();
+//            case 100:
+//                return new Dollar();
+//            default:
+//            break;
+//        }
+//    return null;
+//    }
 
     public static boolean checkAgainstPrice(int inserted, int price){
         return inserted >= price;
     }
-//
-//    public static void systemResponse(selectedItem){
-//        int totalInserted = 0;
-//
-//        Scanner coinReader = new Scanner(System.in);
-//        int coinValue = Integer.parseInt(coinReader.next());
-//
-////        System.out.println(selectedItem);
-//        do {
-//            totalInserted += coinValue;
-//            System.out.println(totalInserted);
-//        }
-//        while(checkAgainstPrice(totalInserted, selectedItem.getPrice));
-//
-//        ICoin coin1 = createCoin(coinValue);
-//        totalInserted += coinValue;
-//        System.out.println("You have inserted " + totalInserted + "c");
-//    }
+
+    public static int sumArray(ArrayList<Integer> array){
+        int total = 0;
+        for(int number: array){
+            total += number;
+        }
+        return total;
+    }
 
 }
