@@ -82,7 +82,7 @@ public class VendingMachine {
 
     public VendableItem selectRack(Rack rack){
         rack.selectRack();
-        VendableItem item = (VendableItem) rack.getRackContents().get(0);
+        IVend item = rack.getRackContents().get(0);
         if(this.getCoinsPendingValue() == item.getPrice()){
             return retainCoinsDispenseItem(rack);
         } else if(this.getCoinsPendingValue() > item.getPrice()){
@@ -100,7 +100,7 @@ public class VendingMachine {
 
 //Methods for generating change and removing it from coinsRetained:
 
-    public void makeChange(VendableItem item){
+    public void makeChange(IVend item){
         int difference = this.getCoinsPendingValue() - item.getPrice();
         int iterations = difference / 25;
         switch(difference % 25){
